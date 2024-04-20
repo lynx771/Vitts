@@ -1,0 +1,103 @@
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VISUALLY  IMPAIRED TEACHER SUPORT SYSYTEM </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-primary py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-white pr-3" href=""></a>
+                        <span class="text-white"></span>
+                        <a class="text-white px-3" href=""></a>
+                        <span class="text-white"></span>
+                        <a class="text-white pl-3" href=""></a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-white px-3" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-white px-3" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-white px-3" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-white px-3" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-white pl-3" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="m-0 text-secondary"><span class="text-primary">VISUALLY </span>IMPAIRED</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        {% if request.session.userid %}
+                        <a href="index" class="nav-item nav-link active">HOME</a>
+                        <a href="http://127.0.0.1:8000/upload" class="nav-item nav-link">UPLOAD</a>
+                        <a href="http://127.0.0.1:8000/logout" class="nav-item nav-link">LOGOUT</a>
+                        {% elif request.session.admin %}
+                        <a href="index" class="nav-item nav-link active">Home</a>
+                        <a href="http://127.0.0.1:8000/viewupload" class="nav-item nav-link">VIEWUPLOAD</a>
+                        <a href="http://127.0.0.1:8000/viewuser" class="nav-item nav-link">VIEWUSER</a>
+                        <a href="http://127.0.0.1:8000/logout" class="nav-item nav-link">LOGOUT</a>
+                        {% else %}
+                        <a href="index" class="nav-item nav-link active">HOME</a>
+                        <a href="http://127.0.0.1:8000/register" class="nav-item nav-link">REGISTER</a>
+                        <a href="http://127.0.0.1:8000/login" class="nav-item nav-link">LOGIN</a>
+                        {% endif %}
+                        
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+    {% endblock %}  
+        

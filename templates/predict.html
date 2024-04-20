@@ -1,0 +1,58 @@
+{% include 'header.html' %}
+<br> 
+<br>
+<br>
+<center>
+ 
+ <!-- Contact Start -->
+ <div class="container-fluid py-5">
+    <div class="container" style="max-width: 900px;">
+        <div class="row">
+            <div class="col-12">
+                <h3>Heart Disease Prediction App</h3>
+            </div>
+            <div class="col-12">
+                <div class="contact-form">
+                    <div id="success"></div>
+                    <form action="addpredict" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <div class="control-group">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="name" required="required"  />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="control-group">
+                                    <input type="email" class="form-control" name="email" id="age" placeholder="email" required="required" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="control-group">
+                                    <input type="password" class="form-control" name="" id="sex" placeholder="password" required="required" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                        
+                        <div class="col-md-6">
+                            <div class="control-group">
+                                <input type="number" class="form-control" name="phone" id="Alochol User or not" placeholder="phone" required="required"  />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                       
+
+                        <div>
+                            <button class="btn btn-primary py-3 px-5" type="submit" id="sendMessageButton">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+</Center>
+{% include 'footer.html' %}

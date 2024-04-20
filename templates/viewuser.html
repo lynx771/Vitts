@@ -1,0 +1,55 @@
+{% include 'header.html' %}
+<br>
+<br> 
+<br>
+<br>
+<center>
+  <section class="contact_section  long_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form_container">
+            <div class="heading_container">
+              <h2>
+                VIEW USER
+              </h2>
+            </div>
+            <table class="table table-striped" >
+                <thead>
+                    <tr>
+                        <th scope="col">slno</th>
+                        <th scope="col">name</th>
+                        <th scope="col">email</th>
+                        <th scope="col">password</th>
+                        <th scope="col">phone</th>
+                        
+                        
+                        
+        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    {% for i in result %}
+                    <tr>
+                        <td></strong>{{forloop.counter}}</td>
+                        <td></strong>{{i.name}}</td>
+                        <td>{{i.email}}</strong></td>
+                        <td>{{i.password}}</td>
+                        <td>{{i.phone}}</td>
+        
+                        
+        
+                        
+                        
+        
+        
+                    </tr>
+                    
+                    {% endfor %}
+                </tbody>
+            </table>
+        </Center>
+        
+                </div>
+                {% include 'footer.html' %}    

@@ -1,0 +1,54 @@
+{% include 'header.html' %}
+<br> 
+<br>
+<br>
+<center>
+ 
+ <!-- Contact Start -->
+ <div class="container-fluid py-5">
+    <div class="container" style="max-width: 900px;">
+        <div class="row">
+            <div class="col-12">
+                <h3>UPLOAD YOUR FILE</h3>
+            </div>
+            <div class="col-12">
+                <div class="contact-form">
+                    <div id="success"></div>
+                    <form action="addtest" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            
+
+                            <div class="col-md-8">
+                                <div class="control-group">
+                                    <input type="file" class="form-control" name="name" id="image" placeholder="image" required="required" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-primary py-3 px-5" type="submit">Submit</button>
+                            </div>
+                            <hr><br><br>
+                            <div class="col-md-10" style="background-color: azure;"> 
+                            <div class="col-md-8">
+                            <h1>Result</h1><br>
+                            </div>
+                            <div class="col-md-8">
+                            <h2><span style="color:rgb(0, 128, 107) ;">{{result}}</span></h2>
+                            </div>
+                        </div>
+
+                        
+                    </form>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+</Center>
+{% include 'footer.html' %}

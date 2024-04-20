@@ -1,0 +1,55 @@
+{% include 'header.html' %}
+<br>
+<br> 
+<br>
+<br>
+<center>
+  <section class="contact_section  long_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form_container">
+            <div class="heading_container">
+              <h2>
+                VIEW UPLOAD
+              </h2>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        
+                        <th scope="col">slno</th>
+                        <th scope="col">File </th>
+                        <th scope="col">Result</th>
+                        
+                        
+                        
+                        
+                        
+        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    {% for i in result %}
+                    <tr>
+                        <td></strong>{{forloop.counter}}</td>
+                        
+                        <td><a  href="../media/{{i.images}}" >View File</a></td> 
+                        
+        
+                        <td>{{i.result}}</td>
+        
+                        
+                        
+        
+        
+                    </tr>
+                    
+                    {% endfor %}
+                </tbody>
+            </table>
+        </Center>
+        
+                </div>
+                {% include 'footer.html' %}    
