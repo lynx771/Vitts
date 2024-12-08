@@ -12,7 +12,7 @@ VITTS is a web application designed to support visually impaired teachers in mon
 ## Installation
 
 1. Clone the repository:
-   git clone https://github.com/your_username/visually_impaired.git
+   git clone [https://github.com/lynx771/Vitts.git](https://github.com/lynx771/Vitts.git)
 2. Install dependencies:
    pip install -r requirements.txt
 
